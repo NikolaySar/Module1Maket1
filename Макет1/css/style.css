@@ -1,0 +1,170 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  /* inherit - наследовать, как у родителя */
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+ul {
+  /* list-style-type убрал точки у списка меню  */
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+body {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  line-height: 1.3;
+}
+.header {
+  margin-bottom: 40px;
+}
+.header_inner {
+  padding-top: 40px;
+  padding-bottom: 45px;
+  display: flex;
+  justify-content: space-between;
+  /* текст прижимается к нижней части контейнера */
+  align-items: flex-end;
+}
+.nav {
+}
+.menu-btn {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+.menu-btn span {
+  height: 2px;
+  background-color: #ffff;
+  width: 100%;
+}
+.menu {
+  display: flex;
+  gap: 35px;
+}
+
+/*  */
+.top_items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top_title {
+  font-weight: 700;
+  font-size: 4.5rem;
+  color: blue;
+}
+.top_img {
+  max-width: 900px;
+  max-height: 900px;
+  border-radius: 50%;
+  margin: 40px auto 0;
+}
+
+/*  */
+.accomplishments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: -270px auto 0;
+}
+.accomplishments_inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 900px;
+}
+.accomplishments_item {
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+  padding: 20px;
+  background-color: #fff;
+}
+.icon {
+  min-height: 80px;
+  max-width: 80px;
+  margin: 20px 0 0;
+}
+.accomplishments_item-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px 0 0;
+}
+.accomplishments_item-text {
+  margin-top: 20px;
+}
+
+.low_text {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 30px auto 60px;
+}
+.low_text__link {
+  color: #0045be !important;
+  border-width: 1px;
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #333333;
+  padding: 50px 0 32px;
+  color: #ffff;
+  text-align: center;
+}
+.footer-text {
+  max-width: 417px;
+  margin-top: 49px;
+  margin-bottom: 49px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 1055px) {
+  .header_inner {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 970px) {
+  .accomplishments {
+    margin-top: -99px;
+  }
+  .accomplishments_inner {
+    max-height: 888px;
+    grid-template-columns: repeat(2, calc(50% - 25px));
+    max-width: 720px;
+  }
+  .top_img {
+    max-height: 700px;
+    max-width: 700px;
+    margin-top: 40px;
+  }
+}
